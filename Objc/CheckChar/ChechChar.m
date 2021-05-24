@@ -9,4 +9,14 @@
 
 @implementation ChechChar
 
+-(BOOL)checkCharInAlphabet: (NSString *)symbol {
+    NSString *baseStr = @"aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+    if ([baseStr rangeOfString:symbol].location !=NSNotFound)
+    {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end
