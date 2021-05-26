@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "Calculate.h"
 #import "ChechChar.h"
+#import "Arrays.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -20,6 +21,7 @@ int main(int argc, const char * argv[]) {
         scanf("%ld", &b);
         Calculate *calculate = [[Calculate alloc] init];
         ChechChar *checkChar = [[ChechChar alloc] init];
+        Arrays *array = [[Arrays alloc] init];
         sum = [calculate sum:a with:b];
         dif = [calculate difference:a with:b];
         multi = [calculate multiplication:a with:b];
@@ -34,6 +36,7 @@ int main(int argc, const char * argv[]) {
         } else {
             NSLog(@"Alphabet not include this symbol %s", inputSymbol);
         }
+        array.printArray;
     }
     return 0;
 }
