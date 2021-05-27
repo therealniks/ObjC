@@ -7,25 +7,44 @@
 
 #import "Calculate.h"
 
+
 @implementation Calculate
-- (NSInteger)sum :(NSInteger)value with :(NSInteger)otherValue {
-    NSLog(@"Sum is %ld", value + otherValue);
+- (CGFloat)sum :(CGFloat)value with :(CGFloat)otherValue {
+    NSLog(@"Sum is %.0f", value + otherValue);
         return value + otherValue;
 }
 
-- (NSInteger)difference :(NSInteger)value with :(NSInteger)otherValue {
-    NSLog(@"Difference is %ld", value - otherValue);
+- (CGFloat)difference :(CGFloat)value with :(CGFloat)otherValue {
+    NSLog(@"Difference is %.0f", value - otherValue);
         return value - otherValue;
 }
 
-- (NSInteger)multiplication :(NSInteger)value with :(NSInteger)otherValue {
-    NSLog(@"Multiplication is %ld", value * otherValue);
+- (CGFloat)multiplication :(CGFloat)value with :(CGFloat)otherValue {
+    NSLog(@"Multiplication is %.0f", value * otherValue);
         return value * otherValue;
 }
 
-- (CGFloat)division :(NSInteger)value with :(NSInteger)otherValue {
-    NSLog(@"Division is %.2f", (CGFloat)value / (CGFloat)otherValue);
-        return (CGFloat)value / (CGFloat)otherValue;
+- (CGFloat)division :(CGFloat)value with :(CGFloat)otherValue {
+    NSLog(@"Division is %.2f", value / otherValue);
+        return value / otherValue;
+}
+- (CGFloat)calculating :(MathOperation)method with:(CGFloat)firstValue :(CGFloat)secondValue {
+    CGFloat result;
+    switch (method) {
+        case MathOperationPlus:
+            result = [self sum:firstValue with:secondValue];
+            break;
+        case MathOperationMinus:
+            result = [self difference:firstValue with:secondValue];
+            break;
+        case MathOperationDivision:
+            result = [self division:firstValue with:secondValue];
+            break;
+        case MathOperationMultiplication:
+            result = [self multiplication:firstValue with:secondValue];
+            break;
+    }
+    return result;
 }
 
 @end
