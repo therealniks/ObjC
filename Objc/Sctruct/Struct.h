@@ -9,7 +9,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+struct UserStore {
+    NSMutableArray * users;
+};
+
+typedef struct UserStore UserStore;
+
 @interface Struct : NSObject
+- (void)addUserInStore :(UserStore)store;
+- (UserStore) :createStoreList;
+- (void)printUsersForStore :(UserStore)store;
 
 @end
 
