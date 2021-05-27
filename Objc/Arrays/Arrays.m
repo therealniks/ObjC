@@ -8,7 +8,7 @@
 #import "Arrays.h"
 
 @implementation Arrays
--(void)printArray {
+- (void)printArray {
     NSArray *array = @[@0,@1,@3,@4,@5,@6];
     for(NSNumber *number in array){
         NSLog(@"%@",number);

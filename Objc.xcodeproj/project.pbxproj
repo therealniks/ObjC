@@ -10,7 +10,7 @@
 		805705852656DDB5001FFBF6 /* ChechChar.m in Sources */ = {isa = PBXBuildFile; fileRef = 805705842656DDB5001FFBF6 /* ChechChar.m */; };
 		8057058C2656DDD6001FFBF6 /* Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8057058B2656DDD6001FFBF6 /* Calculate.m */; };
 		8068D0B7265EC47D002F69BC /* Arrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8068D0B6265EC47D002F69BC /* Arrays.m */; };
-		8068D0BA265EC48E002F69BC /* Struct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8068D0B9265EC48E002F69BC /* Struct.m */; };
+		8068D0BA265EC48E002F69BC /* Structure.m in Sources */ = {isa = PBXBuildFile; fileRef = 8068D0B9265EC48E002F69BC /* Structure.m */; };
 		80995091265317CA006FC3FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80995090265317CA006FC3FB /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +33,8 @@
 		8057058B2656DDD6001FFBF6 /* Calculate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculate.m; sourceTree = "<group>"; };
 		8068D0B5265EC47D002F69BC /* Arrays.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arrays.h; sourceTree = "<group>"; };
 		8068D0B6265EC47D002F69BC /* Arrays.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arrays.m; sourceTree = "<group>"; };
-		8068D0B8265EC48E002F69BC /* Struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Struct.h; sourceTree = "<group>"; };
-		8068D0B9265EC48E002F69BC /* Struct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Struct.m; sourceTree = "<group>"; };
+		8068D0B8265EC48E002F69BC /* Structure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Structure.h; sourceTree = "<group>"; };
+		8068D0B9265EC48E002F69BC /* Structure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Structure.m; sourceTree = "<group>"; };
 		8099508D265317CA006FC3FB /* Objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Objc; sourceTree = BUILT_PRODUCTS_DIR; };
 		80995090265317CA006FC3FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +80,8 @@
 		8068D0B4265EC435002F69BC /* Sctruct */ = {
 			isa = PBXGroup;
 			children = (
-				8068D0B8265EC48E002F69BC /* Struct.h */,
-				8068D0B9265EC48E002F69BC /* Struct.m */,
+				8068D0B8265EC48E002F69BC /* Structure.h */,
+				8068D0B9265EC48E002F69BC /* Structure.m */,
 			);
 			path = Sctruct;
 			sourceTree = "<group>";
@@ -173,7 +173,7 @@
 				80995091265317CA006FC3FB /* main.m in Sources */,
 				8068D0B7265EC47D002F69BC /* Arrays.m in Sources */,
 				8057058C2656DDD6001FFBF6 /* Calculate.m in Sources */,
-				8068D0BA265EC48E002F69BC /* Struct.m in Sources */,
+				8068D0BA265EC48E002F69BC /* Structure.m in Sources */,
 				805705852656DDB5001FFBF6 /* ChechChar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
