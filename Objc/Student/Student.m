@@ -24,4 +24,15 @@
     return combine;
 }
 
+- (void)addOneYear {
+    _age = [NSNumber numberWithInteger:([_age integerValue] + 1)];
+    NSLog(@"add one year");
+}
+
+- (NSString *)description {
+    NSString *fullName = [self fullname];
+    NSString *descriptonString = [NSString stringWithFormat: @"Student %@, age: %@", fullName, _age.stringValue];
+    return descriptonString;
+}
+
 @end
