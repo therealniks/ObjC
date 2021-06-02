@@ -6,49 +6,34 @@
 //
 
 #import <Foundation/Foundation.h>
-
-int summ(int a, int b) {
-    int total;
-    total = a + b;
-    printf("Sum is %d \n", total);
-    return total;
-    
-}
-
-float division(int a, int b) {
-    float total;
-    total = (float)a/(float)b;
-    printf("Division is %.2f \n", total);
-    return total;
-}
-
-int diff(int a, int b) {
-    int total;
-    total = a - b;
-    printf("Difference is %d \n", total);
-    return total;
-}
-int multiplication(int a, int b) {
-    int total;
-    total = a*b;
-    printf("Multiplication is %d \n", total);
-    return total;
-}
+#import "Calculate.h"
+#import "ChechChar.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        int a, b, sum, dif, multi;
-        float div;
+        NSInteger a, b, sum, dif, multi;
+        CGFloat div;
+        BOOL check;
+        char inputSymbol[2]="";
         printf("Enter a and b \n");
-        scanf("%d", &a);
-        scanf("%d", &b);
-        sum = summ(a, b);
-        dif = diff(a,b);
-        multi = multiplication(a, b);
-        div = division(a, b);
-        NSLog(@"Sum is %d, Difference is %d, Multiplication is %d, Division is %.2f", sum, dif, multi, div);
+        scanf("%ld", &a);
+        scanf("%ld", &b);
+        Calculate *calculate = [[Calculate alloc] init];
+        ChechChar *checkChar = [[ChechChar alloc] init];
+        sum = [calculate sum:a with:b];
+        dif = [calculate difference:a with:b];
+        multi = [calculate multiplication:a with:b];
+        div = [calculate division:a with:b];
+        NSLog(@"Sum is %ld, Difference is %ld, Multiplication is %ld, Division is %.2f", sum, dif, multi, div);
+        printf("Enter symbol:\n");
+        scanf("%s", inputSymbol);
+        NSString *str = [NSString stringWithFormat:@"%s", inputSymbol];
+        check = [checkChar checkCharInAlphabet: str];
+        if (check==YES) {
+            NSLog(@"Alphabet include this symbol %s", inputSymbol);
+        } else {
+            NSLog(@"Alphabet not include this symbol %s", inputSymbol);
+        }
     }
     return 0;
 }
-
-
