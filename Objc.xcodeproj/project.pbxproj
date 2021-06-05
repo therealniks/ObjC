@@ -11,7 +11,10 @@
 		8057058C2656DDD6001FFBF6 /* Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8057058B2656DDD6001FFBF6 /* Calculate.m */; };
 		8068D0B7265EC47D002F69BC /* Arrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8068D0B6265EC47D002F69BC /* Arrays.m */; };
 		8068D0BA265EC48E002F69BC /* Struct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8068D0B9265EC48E002F69BC /* Struct.m */; };
+		808F0717266269EC00255720 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F0716266269EC00255720 /* Student.m */; };
 		80995091265317CA006FC3FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80995090265317CA006FC3FB /* main.m */; };
+		80F7B43F266966C300667CC3 /* Flock.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F7B43E266966C300667CC3 /* Flock.m */; };
+		80F7B442266966CC00667CC3 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F7B441266966CC00667CC3 /* Bird.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,8 +38,14 @@
 		8068D0B6265EC47D002F69BC /* Arrays.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arrays.m; sourceTree = "<group>"; };
 		8068D0B8265EC48E002F69BC /* Struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Struct.h; sourceTree = "<group>"; };
 		8068D0B9265EC48E002F69BC /* Struct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Struct.m; sourceTree = "<group>"; };
+		808F0715266269EC00255720 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		808F0716266269EC00255720 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		8099508D265317CA006FC3FB /* Objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Objc; sourceTree = BUILT_PRODUCTS_DIR; };
 		80995090265317CA006FC3FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80F7B43D266966C300667CC3 /* Flock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flock.h; sourceTree = "<group>"; };
+		80F7B43E266966C300667CC3 /* Flock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flock.m; sourceTree = "<group>"; };
+		80F7B440266966CC00667CC3 /* Bird.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bird.h; sourceTree = "<group>"; };
+		80F7B441266966CC00667CC3 /* Bird.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +95,15 @@
 			path = Sctruct;
 			sourceTree = "<group>";
 		};
+		808F0714266269BD00255720 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				808F0715266269EC00255720 /* Student.h */,
+				808F0716266269EC00255720 /* Student.m */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
 		80995084265317CA006FC3FB = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +123,9 @@
 		8099508F265317CA006FC3FB /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				80F7B43C2669669900667CC3 /* Flock */,
+				80F7B43B2669665A00667CC3 /* Bird */,
+				808F0714266269BD00255720 /* Student */,
 				8068D0B3265EC42E002F69BC /* Arrays */,
 				805705882656DDC7001FFBF6 /* Calculate */,
 				805705872656DDBD001FFBF6 /* CheckChar */,
@@ -112,6 +133,24 @@
 				80995090265317CA006FC3FB /* main.m */,
 			);
 			path = Objc;
+			sourceTree = "<group>";
+		};
+		80F7B43B2669665A00667CC3 /* Bird */ = {
+			isa = PBXGroup;
+			children = (
+				80F7B440266966CC00667CC3 /* Bird.h */,
+				80F7B441266966CC00667CC3 /* Bird.m */,
+			);
+			path = Bird;
+			sourceTree = "<group>";
+		};
+		80F7B43C2669669900667CC3 /* Flock */ = {
+			isa = PBXGroup;
+			children = (
+				80F7B43D266966C300667CC3 /* Flock.h */,
+				80F7B43E266966C300667CC3 /* Flock.m */,
+			);
+			path = Flock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,9 +211,12 @@
 			files = (
 				80995091265317CA006FC3FB /* main.m in Sources */,
 				8068D0B7265EC47D002F69BC /* Arrays.m in Sources */,
+				80F7B442266966CC00667CC3 /* Bird.m in Sources */,
+				80F7B43F266966C300667CC3 /* Flock.m in Sources */,
 				8057058C2656DDD6001FFBF6 /* Calculate.m in Sources */,
 				8068D0BA265EC48E002F69BC /* Struct.m in Sources */,
 				805705852656DDB5001FFBF6 /* ChechChar.m in Sources */,
+				808F0717266269EC00255720 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +337,7 @@
 		80995095265317CA006FC3FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SFYUBPZ6J;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -306,6 +349,7 @@
 		80995096265317CA006FC3FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SFYUBPZ6J;
 				ENABLE_HARDENED_RUNTIME = YES;
