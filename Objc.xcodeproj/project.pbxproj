@@ -11,6 +11,7 @@
 		8057058C2656DDD6001FFBF6 /* Calculate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8057058B2656DDD6001FFBF6 /* Calculate.m */; };
 		8068D0B7265EC47D002F69BC /* Arrays.m in Sources */ = {isa = PBXBuildFile; fileRef = 8068D0B6265EC47D002F69BC /* Arrays.m */; };
 		8068D0BA265EC48E002F69BC /* Struct.m in Sources */ = {isa = PBXBuildFile; fileRef = 8068D0B9265EC48E002F69BC /* Struct.m */; };
+		8069D965266D2B210082E8F5 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8069D964266D2B210082E8F5 /* Arithmetic.m */; };
 		808F0717266269EC00255720 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 808F0716266269EC00255720 /* Student.m */; };
 		80995091265317CA006FC3FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80995090265317CA006FC3FB /* main.m */; };
 		80F7B43F266966C300667CC3 /* Flock.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F7B43E266966C300667CC3 /* Flock.m */; };
@@ -38,6 +39,8 @@
 		8068D0B6265EC47D002F69BC /* Arrays.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arrays.m; sourceTree = "<group>"; };
 		8068D0B8265EC48E002F69BC /* Struct.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Struct.h; sourceTree = "<group>"; };
 		8068D0B9265EC48E002F69BC /* Struct.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Struct.m; sourceTree = "<group>"; };
+		8069D963266D2B210082E8F5 /* Arithmetic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arithmetic.h; sourceTree = "<group>"; };
+		8069D964266D2B210082E8F5 /* Arithmetic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arithmetic.m; sourceTree = "<group>"; };
 		808F0715266269EC00255720 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		808F0716266269EC00255720 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		8099508D265317CA006FC3FB /* Objc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Objc; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,15 @@
 			path = Sctruct;
 			sourceTree = "<group>";
 		};
+		8069D962266D2AF50082E8F5 /* Arithmetic */ = {
+			isa = PBXGroup;
+			children = (
+				8069D963266D2B210082E8F5 /* Arithmetic.h */,
+				8069D964266D2B210082E8F5 /* Arithmetic.m */,
+			);
+			path = Arithmetic;
+			sourceTree = "<group>";
+		};
 		808F0714266269BD00255720 /* Student */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +135,7 @@
 		8099508F265317CA006FC3FB /* Objc */ = {
 			isa = PBXGroup;
 			children = (
+				8069D962266D2AF50082E8F5 /* Arithmetic */,
 				80F7B43C2669669900667CC3 /* Flock */,
 				80F7B43B2669665A00667CC3 /* Bird */,
 				808F0714266269BD00255720 /* Student */,
@@ -214,6 +227,7 @@
 				80F7B442266966CC00667CC3 /* Bird.m in Sources */,
 				80F7B43F266966C300667CC3 /* Flock.m in Sources */,
 				8057058C2656DDD6001FFBF6 /* Calculate.m in Sources */,
+				8069D965266D2B210082E8F5 /* Arithmetic.m in Sources */,
 				8068D0BA265EC48E002F69BC /* Struct.m in Sources */,
 				805705852656DDB5001FFBF6 /* ChechChar.m in Sources */,
 				808F0717266269EC00255720 /* Student.m in Sources */,
