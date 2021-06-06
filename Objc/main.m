@@ -6,54 +6,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Calculate.h"
-#import "ChechChar.h"
-#import "Arrays.h"
+#import "Arithmetic.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSInteger a, b;
-        BOOL check;
-        char inputSymbol[2]="";
-        char operationType;
-        
-        Calculate *calculate = [[Calculate alloc] init];
-        ChechChar *checkChar = [[ChechChar alloc] init];
-        Arrays *array = [[Arrays alloc] init];
-        
-        printf("Enter a and b \n");
-        scanf("%ld", &a);
-        scanf("%ld", &b);
-        printf("Enter operation type \n");
-        scanf("%s", &operationType);
-        
-        switch (operationType) {
-            case '+':
-                [calculate calculating:MathOperationPlus with:a :b];
-                break;
-            case '-':
-                [calculate calculating:MathOperationMinus with:a :b];
-                break;
-            case '/':
-                [calculate calculating:MathOperationDivision with:a :b];
-                break;
-            case '*':
-                [calculate calculating:MathOperationMultiplication with:a :b];
-                break;
-            default:
-                printf("Error! Uncorrect operation type!");
-                break;
-        }
-        printf("Enter symbol:\n");
-        scanf("%s", inputSymbol);
-        NSString *str = [NSString stringWithFormat:@"%s", inputSymbol];
-        check = [checkChar checkCharInAlphabet: str];
-        if (check==YES) {
-            NSLog(@"Alphabet include this symbol %s", inputSymbol);
-        } else {
-            NSLog(@"Alphabet not include this symbol %s", inputSymbol);
-        }
-        array.printArray;
+        int first = 10;
+        int second = 2;
+        int resultSum = [Arithmetic beginWithAction:ActionTypeSum firstNumber:first secondNumber:second];
+        int resultSubstraction = [Arithmetic beginWithAction:ActionTypeSubstraction firstNumber:first secondNumber:second];
+        int resultMultiplication = [Arithmetic beginWithAction:ActionTypeMultiplication firstNumber:first secondNumber:second];
+        int resultDivision = [Arithmetic beginWithAction:ActionTypeDivision firstNumber:first secondNumber:second];
+        int resultRemainderOfTheDivision = [Arithmetic beginWithAction:ActionTypeRemainderOfTheDivision firstNumber:first secondNumber:second];
+        NSLog(@"Result sum - %i", resultSum);
+        NSLog(@"Result substraction - %i", resultSubstraction);
+        NSLog(@"Result multiplication - %i", resultMultiplication);
+        NSLog(@"Result division - %i", resultDivision);
+        NSLog(@"Result remainder of the division - %i", resultRemainderOfTheDivision);
     }
     return 0;
 }
