@@ -6,54 +6,33 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Calculate.h"
-#import "ChechChar.h"
-#import "Arrays.h"
+#import "Arithmetic.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSInteger a, b;
-        BOOL check;
-        char inputSymbol[2]="";
-        char operationType;
-        
-        Calculate *calculate = [[Calculate alloc] init];
-        ChechChar *checkChar = [[ChechChar alloc] init];
-        Arrays *array = [[Arrays alloc] init];
-        
-        printf("Enter a and b \n");
-        scanf("%ld", &a);
-        scanf("%ld", &b);
-        printf("Enter operation type \n");
-        scanf("%s", &operationType);
-        
-        switch (operationType) {
-            case '+':
-                [calculate calculating:MathOperationPlus with:a :b];
-                break;
-            case '-':
-                [calculate calculating:MathOperationMinus with:a :b];
-                break;
-            case '/':
-                [calculate calculating:MathOperationDivision with:a :b];
-                break;
-            case '*':
-                [calculate calculating:MathOperationMultiplication with:a :b];
-                break;
-            default:
-                printf("Error! Uncorrect operation type!");
-                break;
-        }
-        printf("Enter symbol:\n");
-        scanf("%s", inputSymbol);
-        NSString *str = [NSString stringWithFormat:@"%s", inputSymbol];
-        check = [checkChar checkCharInAlphabet: str];
-        if (check==YES) {
-            NSLog(@"Alphabet include this symbol %s", inputSymbol);
-        } else {
-            NSLog(@"Alphabet not include this symbol %s", inputSymbol);
-        }
-        array.printArray;
+        char c[255];
+        BOOL doSmthn = true;
+        printf("Введите текст или done для записи на диск:");
+        NSMutableString *string = [[NSMutableString alloc] init];
+        NSMutableArray *users_input = [[NSMutableArray alloc] init];
+            do {
+                scanf(" %s", c);
+                string = [NSMutableString stringWithCString:c encoding:1];
+                if ([string  isNotEqualTo: @"done"] == YES) {
+                    [users_input addObject:string];
+                    printf("текст или done для записи: ");
+                } else {
+                    doSmthn = false;
+                    }
+                } while (doSmthn);
+            NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+            path = [path stringByAppendingString:@"/UsersInput.plist"];
+            [users_input writeToFile:path atomically:YES];
+            NSLog(@"%@", users_input);
+            users_input = nil;
+            NSLog(@"%@", users_input);
+            users_input = [NSMutableArray arrayWithContentsOfFile:path];
+            NSLog(@"%@", users_input);
     }
     return 0;
 }
